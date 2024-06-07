@@ -2,7 +2,7 @@ import requests
 from behave import *
 import json
 
-API_URL = 'https://reqres.in/api/register'
+REGISTER_API_URL = 'https://reqres.in/api/register'
 headers = {
   'Content-Type': 'application/json'
 }
@@ -16,7 +16,7 @@ def step_given_i_have_user_data(context):
 @when('I send a registration request')
 def step_when_send_registration_request(context):
     user_data = json.dumps(context.user_data)
-    context.response = requests.request("POST", API_URL, headers=headers, data=user_data)
+    context.response = requests.request("POST", REGISTER_API_URL, headers=headers, data=user_data)
     
 @then('the response status should be {expected_status:d}')
 def step_then_response_status_should_be(context, expected_status):
