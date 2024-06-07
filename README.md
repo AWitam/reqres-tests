@@ -1,4 +1,4 @@
-### Testowanie oprogramoanie 2 
+### Testowanie oprogramowania 2 
 #### Zadanie 3 - Testy BDD na podstawie API ReqRes (https://reqres.in/)
 
 ```
